@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 .center{
     background: linear-gradient( rgba(113,4,6,1), rgba(0,0,112,1) );
     height: 100vh;
@@ -14,23 +12,23 @@
     align-items: center;
     display: flex;
     background-size: cover;
-    background-blend-mode:darken;
 }
 
 .image-slider{
+    overflow: hidden;
+    position: absolute;
     border-radius: 8px;
     height: 500px;
-    width: 800px;
-    position: relative;
+    max-width: 800px;
+    /* width: 800px; */
     display: flex;
-
+    transition: transform 0.8s ease;
 }
 
 .image-slider img{
-    /* position: absolute; */
     border-radius: inherit;
     height: 100%;
-    width: 100%;
+    min-width: 100%;
 }
 
 #btn{
@@ -48,4 +46,10 @@
 
 #btn .right, #btn .left{
     margin: 10px;
+}
+
+
+.disabled{
+    pointer-events: none;
+    opacity: 0.5;
 }
